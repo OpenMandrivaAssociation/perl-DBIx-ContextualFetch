@@ -11,6 +11,7 @@ license:	Artistic
 group:		Development/Perl
 url:		http://search.cpan.org/dist/%{module}
 source:		http://search.cpan.org/CPAN/authors/id/T/TM/TMTM/%{module}-%{version}.tar.bz2
+buildroot:	%{_tmppath}/%{name}-%{version}
 buildarch:	noarch
 
 %description
