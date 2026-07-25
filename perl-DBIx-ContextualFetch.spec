@@ -6,14 +6,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	7
+Version:	%{upstream_version}
+Release:	8
 
 Summary:	Add contextual fetches to DBI
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/T/TM/TMTM/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/DBIx-ContextualFetch
+Source0:	https://cpan.metacpan.org/authors/id/T/TM/TMTM/DBIx-ContextualFetch-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
