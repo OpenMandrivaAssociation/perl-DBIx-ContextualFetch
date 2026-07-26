@@ -1,19 +1,17 @@
 %define upstream_name	 DBIx-ContextualFetch
-%define upstream_version 1.03
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(DBI::db\\)|perl\\(DBI::st\\)'
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	8
+Version:	1.03
+Release:	9
 
 Summary:	Add contextual fetches to DBI
 License:	Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/DBIx-ContextualFetch
-Source0:	https://cpan.metacpan.org/authors/id/T/TM/TMTM/DBIx-ContextualFetch-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/T/TM/TMTM/DBIx-ContextualFetch-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ fetch methods to fix this oversight. It also adds a few new methods for
 convenience (though not necessarily efficiency).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -50,9 +48,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.30.0-1mdv2011.0
 + Revision: 403096
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.03-5mdv2009.0
+- rebuild using %1.03 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.03-5mdv2009.0
 + Revision: 256584
 - rebuild
 
